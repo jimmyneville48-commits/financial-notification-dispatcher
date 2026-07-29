@@ -27,10 +27,10 @@ jobs:
           pip install pytest pytest-cov
 
       - name: Run Unit Tests
-        run: pytest tests/test_unit.py -v
+        run: python -m pytest tests/test_unit.py -v
 
       - name: Run Integration Tests
-        run: pytest tests/test_integration.py -v
+        run: python -m pytest tests/test_integration.py -v
 
       - name: Enforce Coverage (>=90%)
-        run: pytest --cov=notification_engine --cov-report=term-missing --cov-fail-under=90
+        run: python -m pytest --cov=notification_engine --cov-report=term-missing --cov-fail-under=90
